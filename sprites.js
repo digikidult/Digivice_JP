@@ -377,6 +377,51 @@ const enemySpriteMap={
     "file": "sprites/wtw-deathmeramon.gif",
     "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/deathmeramon.gif",
     "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "tyranomon": {
+    "file": "sprites/wtw-tyranomon.gif",
+    "source": "https://lcd.withthewill.net/files/dthree/lcd/mon/tyranomon.gif",
+    "collection": "With the Will · D-3 像素圖參考"
+  },
+  "infermon": {
+    "file": "sprites/wtw-infermon.gif",
+    "source": "https://lcd.withthewill.net/files/dark/lcd/mon/infermon.gif",
+    "collection": "With the Will · D-Ark 像素圖參考"
+  },
+  "centalmon": {
+    "file": "sprites/wtw-centalmon.gif",
+    "source": "https://lcd.withthewill.net/files/dthree/lcd/mon/kentarumon.gif",
+    "collection": "With the Will · D-3 像素圖參考"
+  },
+  "diablomon": {
+    "file": "sprites/wtw-diablomon.gif",
+    "source": "https://lcd.withthewill.net/files/dark/lcd/mon/diablomon.gif",
+    "collection": "With the Will · D-Ark 像素圖參考"
+  },
+  "leomon": {
+    "file": "sprites/wtw-leomon.gif",
+    "source": "https://lcd.withthewill.net/files/dark/lcd/mon/leomon.gif",
+    "collection": "With the Will · D-Ark 像素圖參考"
+  },
+  "parrotmon": {
+    "file": "sprites/wtw-parrotmon.gif",
+    "source": "https://lcd.withthewill.net/files/dscan/lcd/mon/parrotmon.gif",
+    "collection": "With the Will · D-Scanner 像素圖參考"
+  },
+  "pinochimon": {
+    "file": "sprites/wtw-pinochimon.gif",
+    "source": "https://lcd.withthewill.net/files/dscan/lcd/mon/pinocchimon.gif",
+    "collection": "With the Will · D-Scanner 像素圖參考"
+  },
+  "imperialdramon: fighter mode": {
+    "file": "sprites/wtw-imperialdramon-fighter.gif",
+    "source": "https://lcd.withthewill.net/files/dscan/lcd/mon/imperialdramonfightermode.gif",
+    "collection": "With the Will · D-Scanner 像素圖參考"
+  },
+  "jesmon": {
+    "file": "sprites/Jesmon_vpet_dv.gif",
+    "source": "https://wikimon.net/images/f/f1/Jesmon_vpet_dv.gif",
+    "collection": "Wikimon · 像素圖參考"
   }
 };
 function enemySprite(e){const s=enemySpriteMap[e[1].toLowerCase()];return s?`<span class="sprite-stage enemy-sprite" title="${esc(s.collection)}"><img class="digimon-sprite" src="${s.file}" alt="${esc(e[0])}像素圖" width="52" height="68" loading="lazy"></span>`:"";}
