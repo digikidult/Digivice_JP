@@ -225,7 +225,7 @@ const spriteMap={
     "collection": "Wikimon · 像素圖參考"
   }
 };
-function sprite(name,kind=''){const key=name.replaceAll('（港譯待確認）','');const s=spriteMap[key];return s?`<span class="sprite-stage ${kind}" title="${esc(s.collection)}"><img class="digimon-sprite" src="${s.file}" alt="${esc(key)}像素圖" width="104" height="136" loading="lazy"></span>`:'';}
+function sprite(name,kind=''){const key=name.replaceAll('（港譯待確認）','');const s=spriteMap[key];return s?`<span class="sprite-stage ${kind}"><img class="digimon-sprite" src="${s.file}" alt="${esc(key)}像素圖" width="104" height="136" loading="lazy"></span>`:'';}
 
 const enemySpriteMap={
   "kuwagamon": {
@@ -628,4 +628,4 @@ const enemySpriteMap={
     "height": 68
   }
 };
-function enemySprite(e){const s=enemySpriteMap[e[1].toLowerCase()];return s?`<span class="sprite-stage enemy-sprite" title="${esc(s.collection)}"><img class="digimon-sprite" src="${s.file}" alt="${esc(e[0])}像素圖" width="52" height="68" loading="lazy"></span>`:"";}
+function enemySprite(e){const s=enemySpriteMap[e[1].toLowerCase()];return s?`<span class="sprite-stage enemy-sprite"><img class="digimon-sprite" src="${s.file}" alt="${esc(e[0])}像素圖" width="52" height="68" loading="lazy"></span>`:"";}
