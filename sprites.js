@@ -226,3 +226,157 @@ const spriteMap={
   }
 };
 function sprite(name,kind=''){const key=name.replaceAll('（港譯待確認）','');const s=spriteMap[key];return s?`<span class="sprite-stage ${kind}" title="${esc(s.collection)}"><img class="digimon-sprite" src="${s.file}" alt="${esc(key)}像素圖" width="104" height="136" loading="lazy"></span>`:'';}
+
+const enemySpriteMap={
+  "kuwagamon": {
+    "file": "sprites/wtw-kuwagamon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/kuwagamon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "devimon": {
+    "file": "sprites/wtw-devimon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/devimon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "etemon": {
+    "file": "sprites/wtw-etemon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/etemon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "metaltyranomon": {
+    "file": "sprites/wtw-metaltyranomon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/metaltyranomon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "metalseadramon": {
+    "file": "sprites/wtw-metalseadramon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/metalseadramon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "megadramon": {
+    "file": "sprites/wtw-megadramon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/megadramon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "mugendramon": {
+    "file": "sprites/wtw-mugendramon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/mugendramon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "gizamon": {
+    "file": "sprites/wtw-gizamon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/gizamon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "gazimon": {
+    "file": "sprites/wtw-gazimon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/gazimon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "kunemon": {
+    "file": "sprites/wtw-kunemon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/kunemon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "sukamon": {
+    "file": "sprites/wtw-sukamon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/sukamon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "bakemon": {
+    "file": "sprites/wtw-bakemon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/bakemon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "shellmon": {
+    "file": "sprites/wtw-shellmon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/shellmon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "gekomon": {
+    "file": "sprites/wtw-gekomon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/gekomon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "airdramon": {
+    "file": "sprites/wtw-airdramon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/airdramon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "ogremon": {
+    "file": "sprites/wtw-ogremon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/ogremon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "darktyranomon": {
+    "file": "sprites/wtw-darktyranomon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/darktyranomon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "wizarmon": {
+    "file": "sprites/wtw-wizarmon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/wizarmon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "tailmon": {
+    "file": "sprites/wtw-tailmon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/tailmon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "vamdemon": {
+    "file": "sprites/wtw-vamdemon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/vamdemon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "venomvamdemon": {
+    "file": "sprites/wtw-venomvamdemon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/venomvamdemon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "piemon": {
+    "file": "sprites/wtw-piemon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/piemon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "picodevimon": {
+    "file": "sprites/wtw-picodevimon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/picodevimon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "numemon": {
+    "file": "sprites/wtw-numemon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/numemon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "monochromon": {
+    "file": "sprites/wtw-monochromon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/monochromon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "cockatrimon": {
+    "file": "sprites/wtw-cockatrimon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/cockatrimon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "dokugumon": {
+    "file": "sprites/wtw-dokugumon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/dokugumon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "devidramon": {
+    "file": "sprites/wtw-devidramon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/devidramon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "mammon": {
+    "file": "sprites/wtw-mammon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/mammon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  },
+  "deathmeramon": {
+    "file": "sprites/wtw-deathmeramon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/deathmeramon.gif",
+    "collection": "With the Will · 原版電波暴龍機敵人圖庫"
+  }
+};
+function enemySprite(e){const s=enemySpriteMap[e[1].toLowerCase()];return s?`<span class="sprite-stage enemy-sprite" title="${esc(s.collection)}"><img class="digimon-sprite" src="${s.file}" alt="${esc(e[0])}像素圖" width="52" height="68" loading="lazy"></span>`:"";}
