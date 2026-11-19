@@ -469,13 +469,11 @@ const enemySpriteMap={
     "height": 68
   },
   "gerbemon": {
-    "file": "sprites/jp-garbemon_vpet_dvic.gif",
-    "source": "https://wikimon.net/images/e/e0/Garbemon_vpet_dvic.gif",
-    "sourcePage": "https://wikimon.net/File%3AGarbemon_vpet_dvic.gif",
-    "collection": "Wikimon · 日版電波暴龍機 iC（其他日版機種參考）",
-    "region": "JP",
-    "width": 52,
-    "height": 52
+    "file": "sprites/user-gerbemon.png",
+    "collection": "用戶提供 · 垃圾桶獸",
+    "source": "用戶提供圖片",
+    "width": 72,
+    "height": 96
   },
   "evilmon": {
     "file": "sprites/jp-evilmon_vpet_dv.gif",
@@ -514,13 +512,12 @@ const enemySpriteMap={
     "height": 68
   },
   "ladydevimon": {
-    "file": "sprites/jp-ladydevimon_vpet_pen.gif",
-    "source": "https://wikimon.net/images/d/da/Ladydevimon_vpet_pen.gif",
-    "sourcePage": "https://wikimon.net/File%3ALadydevimon_vpet_pen.gif",
-    "collection": "Wikimon · 日版 Pendulum（其他日版機種參考）",
+    "file": "sprites/wtw-ladydevimon.gif",
+    "source": "https://lcd.withthewill.net/files/prog/lcd/mon/ladydevimon.gif",
+    "collection": "With the Will · 日版 Pendulum Progress（其他日版機種參考）",
     "region": "JP",
-    "width": 36,
-    "height": 36
+    "width": 26,
+    "height": 34
   },
   "tonosamagekomon": {
     "file": "sprites/jp-tonosamageko_vpet_dt.gif",
