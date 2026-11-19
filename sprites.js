@@ -422,6 +422,213 @@ const enemySpriteMap={
     "file": "sprites/Jesmon_vpet_dv.gif",
     "source": "https://wikimon.net/images/f/f1/Jesmon_vpet_dv.gif",
     "collection": "Wikimon · 像素圖參考"
+  },
+  "warumonzaemon": {
+    "file": "sprites/jp-warumonzaemon_vpet_dv.gif",
+    "source": "https://wikimon.net/images/d/d3/Warumonzaemon_vpet_dv.gif",
+    "sourcePage": "https://wikimon.net/File%3AWarumonzaemon_vpet_dv.gif",
+    "collection": "Wikimon · 日版電波暴龍機（其他日版機種參考）",
+    "region": "JP",
+    "width": 52,
+    "height": 68
+  },
+  "alphamon": {
+    "file": "sprites/jp-alphamon_vpet_penx.gif",
+    "source": "https://wikimon.net/images/9/9d/Alphamon_vpet_penx.gif",
+    "sourcePage": "https://wikimon.net/File%3AAlphamon_vpet_penx.gif",
+    "collection": "Wikimon · 日版 Pendulum X（其他日版機種參考）",
+    "region": "JP",
+    "width": 52,
+    "height": 68
+  },
+  "whamon": {
+    "file": "sprites/jp-whamon_vpet_dt.gif",
+    "source": "https://wikimon.net/images/3/3c/Whamon_vpet_dt.gif",
+    "sourcePage": "https://wikimon.net/File%3AWhamon_vpet_dt.gif",
+    "collection": "Wikimon · 日版 D-Terminal（其他日版機種參考）",
+    "region": "JP",
+    "width": 52,
+    "height": 68
+  },
+  "anomalocarimon": {
+    "file": "sprites/jp-anomalocarimon_vpet_dt.gif",
+    "source": "https://wikimon.net/images/6/68/Anomalocarimon_vpet_dt.gif",
+    "sourcePage": "https://wikimon.net/File%3AAnomalocarimon_vpet_dt.gif",
+    "collection": "Wikimon · 日版 D-Terminal（其他日版機種參考）",
+    "region": "JP",
+    "width": 52,
+    "height": 68
+  },
+  "keramon": {
+    "file": "sprites/jp-keramon_vpet_dt.gif",
+    "source": "https://wikimon.net/images/4/41/Keramon_vpet_dt.gif",
+    "sourcePage": "https://wikimon.net/File%3AKeramon_vpet_dt.gif",
+    "collection": "Wikimon · 日版 D-Terminal（其他日版機種參考）",
+    "region": "JP",
+    "width": 52,
+    "height": 68
+  },
+  "gerbemon": {
+    "file": "sprites/jp-garbemon_vpet_dvic.gif",
+    "source": "https://wikimon.net/images/e/e0/Garbemon_vpet_dvic.gif",
+    "sourcePage": "https://wikimon.net/File%3AGarbemon_vpet_dvic.gif",
+    "collection": "Wikimon · 日版電波暴龍機 iC（其他日版機種參考）",
+    "region": "JP",
+    "width": 52,
+    "height": 52
+  },
+  "evilmon": {
+    "file": "sprites/jp-evilmon_vpet_dv.gif",
+    "source": "https://wikimon.net/images/5/51/Evilmon_vpet_dv.gif",
+    "sourcePage": "https://wikimon.net/File%3AEvilmon_vpet_dv.gif",
+    "collection": "Wikimon · 日版電波暴龍機（其他日版機種參考）",
+    "region": "JP",
+    "width": 52,
+    "height": 68
+  },
+  "jyureiymon": {
+    "file": "sprites/jp-jyureimon_vpet_dt.gif",
+    "source": "https://wikimon.net/images/e/eb/Jyureimon_vpet_dt.gif",
+    "sourcePage": "https://wikimon.net/File%3AJyureimon_vpet_dt.gif",
+    "collection": "Wikimon · 日版 D-Terminal（其他日版機種參考）",
+    "region": "JP",
+    "width": 52,
+    "height": 68
+  },
+  "raremon": {
+    "file": "sprites/jp-raremon_vpet_d3.gif",
+    "source": "https://wikimon.net/images/1/1e/Raremon_vpet_d3.gif",
+    "sourcePage": "https://wikimon.net/File%3ARaremon_vpet_d3.gif",
+    "collection": "Wikimon · 日版 D-3（其他日版機種參考）",
+    "region": "JP",
+    "width": 52,
+    "height": 68
+  },
+  "tankmon": {
+    "file": "sprites/jp-tankmon_vpet_dv.gif",
+    "source": "https://wikimon.net/images/b/b2/Tankmon_vpet_dv.gif",
+    "sourcePage": "https://wikimon.net/File%3ATankmon_vpet_dv.gif",
+    "collection": "Wikimon · 日版電波暴龍機（其他日版機種參考）",
+    "region": "JP",
+    "width": 52,
+    "height": 68
+  },
+  "ladydevimon": {
+    "file": "sprites/jp-ladydevimon_vpet_pen.gif",
+    "source": "https://wikimon.net/images/d/da/Ladydevimon_vpet_pen.gif",
+    "sourcePage": "https://wikimon.net/File%3ALadydevimon_vpet_pen.gif",
+    "collection": "Wikimon · 日版 Pendulum（其他日版機種參考）",
+    "region": "JP",
+    "width": 36,
+    "height": 36
+  },
+  "tonosamagekomon": {
+    "file": "sprites/jp-tonosamageko_vpet_dt.gif",
+    "source": "https://wikimon.net/images/9/9e/Tonosamageko_vpet_dt.gif",
+    "sourcePage": "https://wikimon.net/File%3ATonosamageko_vpet_dt.gif",
+    "collection": "Wikimon · 日版 D-Terminal（其他日版機種參考）",
+    "region": "JP",
+    "width": 52,
+    "height": 68
+  },
+  "hangyomon": {
+    "file": "sprites/jp-hangyomon_vpet_dv.gif",
+    "source": "https://wikimon.net/images/9/98/Hangyomon_vpet_dv.gif",
+    "sourcePage": "https://wikimon.net/File%3AHangyomon_vpet_dv.gif",
+    "collection": "Wikimon · 日版電波暴龍機（其他日版機種參考）",
+    "region": "JP",
+    "width": 52,
+    "height": 68
+  },
+  "metaletemon": {
+    "file": "sprites/jp-metaletemon_vpet_dt.gif",
+    "source": "https://wikimon.net/images/5/56/Metaletemon_vpet_dt.gif",
+    "sourcePage": "https://wikimon.net/File%3AMetaletemon_vpet_dt.gif",
+    "collection": "Wikimon · 日版 D-Terminal（其他日版機種參考）",
+    "region": "JP",
+    "width": 52,
+    "height": 68
+  },
+  "nanomon": {
+    "file": "sprites/jp-nanomon_vpet_dt.gif",
+    "source": "https://wikimon.net/images/8/85/Nanomon_vpet_dt.gif",
+    "sourcePage": "https://wikimon.net/File%3ANanomon_vpet_dt.gif",
+    "collection": "Wikimon · 日版 D-Terminal（其他日版機種參考）",
+    "region": "JP",
+    "width": 52,
+    "height": 68
+  },
+  "apocalymon": {
+    "file": "sprites/jp-apocalymon_vpet_dv.gif",
+    "source": "https://wikimon.net/images/0/0c/Apocalymon_vpet_dv.gif",
+    "sourcePage": "https://wikimon.net/File%3AApocalymon_vpet_dv.gif",
+    "collection": "Wikimon · 日版電波暴龍機（其他日版機種參考）",
+    "region": "JP",
+    "width": 52,
+    "height": 68
+  },
+  "meicrackmon: vicious mode": {
+    "file": "sprites/jp-meicrackmon_vicious_vpet_dv.gif",
+    "source": "https://wikimon.net/images/f/f3/Meicrackmon_vicious_vpet_dv.gif",
+    "sourcePage": "https://wikimon.net/File%3AMeicrackmon_vicious_vpet_dv.gif",
+    "collection": "Wikimon · 日版電波暴龍機 Ver.Complete",
+    "region": "JP",
+    "width": 52,
+    "height": 68
+  },
+  "ofanimon: falldown mode": {
+    "file": "sprites/jp-ofanimon_falldown_vpet_dv.gif",
+    "source": "https://wikimon.net/images/7/7d/Ofanimon_falldown_vpet_dv.gif",
+    "sourcePage": "https://wikimon.net/File%3AOfanimon_falldown_vpet_dv.gif",
+    "collection": "Wikimon · 日版電波暴龍機 Ver.Complete",
+    "region": "JP",
+    "width": 52,
+    "height": 68
+  },
+  "raguelmon": {
+    "file": "sprites/jp-raguelmon_vpet_dv.gif",
+    "source": "https://wikimon.net/images/4/40/Raguelmon_vpet_dv.gif",
+    "sourcePage": "https://wikimon.net/File%3ARaguelmon_vpet_dv.gif",
+    "collection": "Wikimon · 日版電波暴龍機 Ver.Complete",
+    "region": "JP",
+    "width": 52,
+    "height": 68
+  },
+  "ordinemon": {
+    "file": "sprites/jp-ordinemon_vpet_dv.gif",
+    "source": "https://wikimon.net/images/7/72/Ordinemon_vpet_dv.gif",
+    "sourcePage": "https://wikimon.net/File%3AOrdinemon_vpet_dv.gif",
+    "collection": "Wikimon · 日版電波暴龍機 Ver.Complete",
+    "region": "JP",
+    "width": 52,
+    "height": 68
+  },
+  "eosmon (perfect)": {
+    "file": "sprites/jp-eosmon_perfect_vpet_dv.gif",
+    "source": "https://wikimon.net/images/c/c7/Eosmon_perfect_vpet_dv.gif",
+    "sourcePage": "https://wikimon.net/File%3AEosmon_perfect_vpet_dv.gif",
+    "collection": "Wikimon · 日版電波暴龍機 Ver.Complete",
+    "region": "JP",
+    "width": 52,
+    "height": 68
+  },
+  "eosmon (ultimate)": {
+    "file": "sprites/jp-eosmon_ultimate_vpet_dv.gif",
+    "source": "https://wikimon.net/images/e/e5/Eosmon_ultimate_vpet_dv.gif",
+    "sourcePage": "https://wikimon.net/File%3AEosmon_ultimate_vpet_dv.gif",
+    "collection": "Wikimon · 日版電波暴龍機 Ver.Complete",
+    "region": "JP",
+    "width": 52,
+    "height": 68
+  },
+  "eosmon (adult)": {
+    "file": "sprites/jp-eosmon_adult_vpet_dv.gif",
+    "source": "https://wikimon.net/images/2/20/Eosmon_adult_vpet_dv.gif",
+    "sourcePage": "https://wikimon.net/File%3AEosmon_adult_vpet_dv.gif",
+    "collection": "Wikimon · 日版電波暴龍機 Ver.Complete",
+    "region": "JP",
+    "width": 52,
+    "height": 68
   }
 };
 function enemySprite(e){const s=enemySpriteMap[e[1].toLowerCase()];return s?`<span class="sprite-stage enemy-sprite" title="${esc(s.collection)}"><img class="digimon-sprite" src="${s.file}" alt="${esc(e[0])}像素圖" width="52" height="68" loading="lazy"></span>`:"";}
