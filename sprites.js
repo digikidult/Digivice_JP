@@ -225,7 +225,7 @@ const spriteMap={
     "collection": "Wikimon · 像素圖參考"
   }
 };
-function sprite(name,kind=''){const key=name.replaceAll('（港譯待確認）','');const s=spriteMap[key];return s?`<span class="sprite-stage ${kind}"><img class="digimon-sprite" src="${s.file}" alt="${esc(key)}像素圖" width="104" height="136" loading="lazy"></span>`:'';}
+function sprite(name,kind=''){const key=name;const s=spriteMap[key];return s?`<span class="sprite-stage ${kind}"><img class="digimon-sprite" src="${s.file}" alt="${esc(key)}像素圖" width="104" height="136" loading="lazy"></span>`:'';}
 
 const enemySpriteMap={
   "kuwagamon": {
