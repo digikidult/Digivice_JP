@@ -1,0 +1,227 @@
+{
+  "亞古獸": {
+    "file": "sprites/wtw-agumon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/agumon.gif",
+    "collection": "With the Will · 原版電波暴龍機"
+  },
+  "暴龍獸": {
+    "file": "sprites/wtw-greymon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/greymon.gif",
+    "collection": "With the Will · 原版電波暴龍機"
+  },
+  "機械暴龍獸": {
+    "file": "sprites/wtw-metalgreymon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/metalgreymon.gif",
+    "collection": "With the Will · 原版電波暴龍機"
+  },
+  "戰鬥暴龍獸": {
+    "file": "sprites/Wargreymon_vpet_penp.gif",
+    "source": "https://wikimon.net/images/7/7d/Wargreymon_vpet_penp.gif",
+    "collection": "Wikimon · 像素圖參考"
+  },
+  "加布獸": {
+    "file": "sprites/wtw-gabumon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/gabumon.gif",
+    "collection": "With the Will · 原版電波暴龍機"
+  },
+  "加魯魯獸": {
+    "file": "sprites/wtw-garurumon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/garurumon.gif",
+    "collection": "With the Will · 原版電波暴龍機"
+  },
+  "獸人加魯魯獸": {
+    "file": "sprites/wtw-weregarurumon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/weregarurumon.gif",
+    "collection": "With the Will · 原版電波暴龍機"
+  },
+  "鋼鐵加魯魯獸": {
+    "file": "sprites/Metalgarurumon_vpet_dt.gif",
+    "source": "https://wikimon.net/images/c/c8/Metalgarurumon_vpet_dt.gif",
+    "collection": "Wikimon · 像素圖參考"
+  },
+  "比丘獸": {
+    "file": "sprites/wtw-piyomon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/piyomon.gif",
+    "collection": "With the Will · 原版電波暴龍機"
+  },
+  "巴多拉獸": {
+    "file": "sprites/wtw-birdramon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/birdramon.gif",
+    "collection": "With the Will · 原版電波暴龍機"
+  },
+  "伽樓達獸": {
+    "file": "sprites/wtw-garudamon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/garudamon.gif",
+    "collection": "With the Will · 原版電波暴龍機"
+  },
+  "鳳凰獸": {
+    "file": "sprites/Hououmon_vpet_dt.gif",
+    "source": "https://wikimon.net/images/b/bc/Hououmon_vpet_dt.gif",
+    "collection": "Wikimon · 像素圖參考"
+  },
+  "甲蟲獸": {
+    "file": "sprites/wtw-tentomon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/tentomon.gif",
+    "collection": "With the Will · 原版電波暴龍機"
+  },
+  "比多獸": {
+    "file": "sprites/wtw-kabuterimon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/kabuterimon.gif",
+    "collection": "With the Will · 原版電波暴龍機"
+  },
+  "超比多獸": {
+    "file": "sprites/wtw-atlurkabuterimon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/atlurkabuterimon.gif",
+    "collection": "With the Will · 原版電波暴龍機"
+  },
+  "究極比多獸": {
+    "file": "sprites/Heraklekabuterimon_vpet_dt.gif",
+    "source": "https://wikimon.net/images/c/c8/Heraklekabuterimon_vpet_dt.gif",
+    "collection": "Wikimon · 像素圖參考"
+  },
+  "哥瑪獸": {
+    "file": "sprites/wtw-gomamon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/gomamon.gif",
+    "collection": "With the Will · 原版電波暴龍機"
+  },
+  "海獅獸": {
+    "file": "sprites/wtw-ikkakumon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/ikkakumon.gif",
+    "collection": "With the Will · 原版電波暴龍機"
+  },
+  "祖頓獸": {
+    "file": "sprites/wtw-zudomon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/zudomon.gif",
+    "collection": "With the Will · 原版電波暴龍機"
+  },
+  "維京獸": {
+    "file": "sprites/Vikemon_vpet_d3.gif",
+    "source": "https://wikimon.net/images/f/f7/Vikemon_vpet_d3.gif",
+    "collection": "Wikimon · 像素圖參考"
+  },
+  "巴魯獸": {
+    "file": "sprites/wtw-palmon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/palmon.gif",
+    "collection": "With the Will · 原版電波暴龍機"
+  },
+  "仙人掌獸": {
+    "file": "sprites/wtw-togemon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/togemon.gif",
+    "collection": "With the Will · 原版電波暴龍機"
+  },
+  "花仙獸": {
+    "file": "sprites/wtw-lilymon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/lilymon.gif",
+    "collection": "With the Will · 原版電波暴龍機"
+  },
+  "薔薇獸": {
+    "file": "sprites/Rosemon_vpet_dscan.gif",
+    "source": "https://wikimon.net/images/d/de/Rosemon_vpet_dscan.gif",
+    "collection": "Wikimon · 像素圖參考"
+  },
+  "巴達獸": {
+    "file": "sprites/wtw-patamon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/patamon.gif",
+    "collection": "With the Will · 原版電波暴龍機"
+  },
+  "天使獸": {
+    "file": "sprites/wtw-angemon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/angemon.gif",
+    "collection": "With the Will · 原版電波暴龍機"
+  },
+  "神聖天使獸": {
+    "file": "sprites/wtw-holyangemon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/holyangemon.gif",
+    "collection": "With the Will · 原版電波暴龍機"
+  },
+  "究極天使獸": {
+    "file": "sprites/Seraphimon_vpet_d3.gif",
+    "source": "https://wikimon.net/images/2/2c/Seraphimon_vpet_d3.gif",
+    "collection": "Wikimon · 像素圖參考"
+  },
+  "迪路獸": {
+    "file": "sprites/wtw-tailmon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/tailmon.gif",
+    "collection": "With the Will · 原版電波暴龍機"
+  },
+  "天女獸": {
+    "file": "sprites/wtw-angewomon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/angewomon.gif",
+    "collection": "With the Will · 原版電波暴龍機"
+  },
+  "聖龍獸": {
+    "file": "sprites/wtw-holydramon.gif",
+    "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/holydramon.gif",
+    "collection": "With the Will · 原版電波暴龍機"
+  },
+  "巫師獸": {
+    "file": "sprites/Wizarmon_vpet_dv.gif",
+    "source": "https://wikimon.net/images/5/56/Wizarmon_vpet_dv.gif",
+    "collection": "Wikimon · 像素圖參考"
+  },
+  "緬因貓獸": {
+    "file": "sprites/Meicoomon_vpet_dark.gif",
+    "source": "https://wikimon.net/images/d/d7/Meicoomon_vpet_dark.gif",
+    "collection": "Wikimon · 像素圖參考"
+  },
+  "哈克獸": {
+    "file": "sprites/Huckmon_vpet_dv.gif",
+    "source": "https://wikimon.net/images/6/69/Huckmon_vpet_dv.gif",
+    "collection": "Wikimon · 像素圖參考"
+  },
+  "刃王哈克獸": {
+    "file": "sprites/Baohuckmon_vpet_dv.gif",
+    "source": "https://wikimon.net/images/2/24/Baohuckmon_vpet_dv.gif",
+    "collection": "Wikimon · 像素圖參考"
+  },
+  "救星哈克獸": {
+    "file": "sprites/Saviorhuckmon_vpet_dv.gif",
+    "source": "https://wikimon.net/images/8/8e/Saviorhuckmon_vpet_dv.gif",
+    "collection": "Wikimon · 像素圖參考"
+  },
+  "傑斯獸": {
+    "file": "sprites/Jesmon_vpet_dv.gif",
+    "source": "https://wikimon.net/images/f/f1/Jesmon_vpet_dv.gif",
+    "collection": "Wikimon · 像素圖參考"
+  },
+  "奧米加獸": {
+    "file": "sprites/Omegamon_vpet_dt.gif",
+    "source": "https://wikimon.net/images/6/65/Omegamon_vpet_dt.gif",
+    "collection": "Wikimon · 像素圖參考"
+  },
+  "奧米加獸・慈悲形態": {
+    "file": "sprites/Omegamon_merciful_vpet_dv.gif",
+    "source": "https://wikimon.net/images/6/64/Omegamon_merciful_vpet_dv.gif",
+    "collection": "Wikimon · 像素圖參考"
+  },
+  "亞古獸・勇氣之絆": {
+    "file": "sprites/Agumon_yukiskizuna_vpet_dv.gif",
+    "source": "https://wikimon.net/images/8/88/Agumon_yukiskizuna_vpet_dv.gif",
+    "collection": "Wikimon · 像素圖參考"
+  },
+  "加布獸・友情之絆": {
+    "file": "sprites/Gabumon_yujoskizuna_vpet_dv.gif",
+    "source": "https://wikimon.net/images/c/c2/Gabumon_yujoskizuna_vpet_dv.gif",
+    "collection": "Wikimon · 像素圖參考"
+  },
+  "喪屍暴龍獸": {
+    "file": "sprites/Skullgreymon_vpet_dscan.gif",
+    "source": "https://wikimon.net/images/7/70/Skullgreymon_vpet_dscan.gif",
+    "collection": "Wikimon · 像素圖參考"
+  },
+  "黑戰鬥暴龍獸": {
+    "file": "sprites/Blackwargreymon_vpet_d3.gif",
+    "source": "https://wikimon.net/images/1/14/Blackwargreymon_vpet_d3.gif",
+    "collection": "Wikimon · 像素圖參考"
+  },
+  "黑獸人加魯魯獸": {
+    "file": "sprites/Weregarurumon_black_vpet_dv.gif",
+    "source": "https://wikimon.net/images/f/f3/Weregarurumon_black_vpet_dv.gif",
+    "collection": "Wikimon · 像素圖參考"
+  },
+  "黑鋼鐵加魯魯獸": {
+    "file": "sprites/Metalgarurumon_black_vpet_dv.gif",
+    "source": "https://wikimon.net/images/9/9c/Metalgarurumon_black_vpet_dv.gif",
+    "collection": "Wikimon · 像素圖參考"
+  }
+}
