@@ -54,7 +54,7 @@ const spriteMap={
     "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/garudamon.gif",
     "collection": "With the Will · 原版電波暴龍機"
   },
-  "鳳凰獸": {
+  "聖鷹獸": {
     "file": "sprites/Hououmon_vpet_dt.gif",
     "source": "https://wikimon.net/images/b/bc/Hououmon_vpet_dt.gif",
     "collection": "Wikimon · 像素圖參考"
@@ -94,7 +94,7 @@ const spriteMap={
     "source": "https://lcd.withthewill.net/files/digivice/lcd/mon/zudomon.gif",
     "collection": "With the Will · 原版電波暴龍機"
   },
-  "維京獸": {
+  "維京毛人獸": {
     "file": "sprites/Vikemon_vpet_d3.gif",
     "source": "https://wikimon.net/images/f/f7/Vikemon_vpet_d3.gif",
     "collection": "Wikimon · 像素圖參考"
@@ -626,6 +626,20 @@ const enemySpriteMap={
     "region": "JP",
     "width": 52,
     "height": 68
+  },
+  "kiwimon": {
+    "file": "sprites/user-kiwimon.png",
+    "source": "用戶提供圖片",
+    "collection": "用戶提供 · 奇鳥獸",
+    "width": 26,
+    "height": 34
+  },
+  "mechanorimon": {
+    "file": "sprites/user-mechanorimon.png",
+    "source": "用戶提供圖片",
+    "collection": "用戶提供 · 機械裝甲獸",
+    "width": 72,
+    "height": 96
   }
 };
 function enemySprite(e){const s=enemySpriteMap[e[1].toLowerCase()];return s?`<span class="sprite-stage enemy-sprite"><img class="digimon-sprite" src="${s.file}" alt="${esc(e[0])}像素圖" width="52" height="68" loading="lazy"></span>`:"";}
