@@ -19,7 +19,7 @@ const partners=[
 const maps=[
   [
     "1–1",
-    "大冒險前段",
+    "大冒險前篇",
     3000,
     [
       [
@@ -48,7 +48,7 @@ const maps=[
   ],
   [
     "1–2",
-    "大冒險前段",
+    "大冒險前篇",
     3000,
     [
       [
@@ -79,7 +79,7 @@ const maps=[
   ],
   [
     "1–3",
-    "大冒險前段",
+    "大冒險前篇",
     4000,
     [
       [
@@ -110,7 +110,7 @@ const maps=[
   ],
   [
     "1–4",
-    "大冒險前段",
+    "大冒險前篇",
     4000,
     [
       [
@@ -234,7 +234,7 @@ const maps=[
   ],
   [
     "3–1",
-    "大冒險後段",
+    "大冒險後篇",
     6000,
     [
       [
@@ -265,7 +265,7 @@ const maps=[
   ],
   [
     "3–2",
-    "大冒險後段",
+    "大冒險後篇",
     7000,
     [
       [
@@ -293,7 +293,7 @@ const maps=[
   ],
   [
     "3–3",
-    "大冒險後段",
+    "大冒險後篇",
     8000,
     [
       [
@@ -324,7 +324,7 @@ const maps=[
   ],
   [
     "3–4",
-    "大冒險後段",
+    "大冒險後篇",
     8000,
     [
       [
@@ -353,7 +353,7 @@ const maps=[
   ],
   [
     "3–5",
-    "大冒險後段",
+    "大冒險後篇",
     8000,
     [
       [
@@ -384,7 +384,7 @@ const maps=[
   ],
   [
     "3–6",
-    "大冒險後段",
+    "大冒險後篇",
     9000,
     [
       [
@@ -415,7 +415,7 @@ const maps=[
   ],
   [
     "4–1",
-    "我們的戰爭遊戲",
+    "我們的戰爭遊戲篇",
     9000,
     [
       [
@@ -440,7 +440,7 @@ const maps=[
   ],
   [
     "5–1",
-    "Tri",
+    "Tri篇",
     5000,
     [
       [
@@ -471,7 +471,7 @@ const maps=[
   ],
   [
     "5–2",
-    "Tri",
+    "Tri篇",
     5000,
     [
       [
@@ -500,7 +500,7 @@ const maps=[
   ],
   [
     "6–1",
-    "最後進化 絆",
+    "絆篇",
     5000,
     [
       [
@@ -540,9 +540,13 @@ function check(key,label){return `<label class="check"><input type="checkbox" da
 function progress(keys,label){const n=keys.filter(k=>saved[k]).length;return `<div class="progress-panel"><div class="progress-top"><b>${label}</b><span>${n} / ${keys.length} 完成</span></div><progress value="${n}" max="${keys.length}" aria-label="${label}"></progress></div>`;}
 function renderPartners(){const filter=[['all','全部夥伴',11],['start','初始可選',7],['help','救援限定',4],['done','已收集',partners.filter((_,i)=>saved['p'+i]).length]];const list=partners.map((p,i)=>({p,i})).filter(({p,i})=>match(p)&&(state.filter==='all'||state.filter==='start'&&i<7||state.filter==='help'&&i>=7||state.filter==='done'&&saved['p'+i]));return partnerStatsOverview()+progress(partners.map((_,i)=>'p'+i),'你的夥伴收集')+`<div class="catalog"><aside><div class="filters">${filter.map(([k,t,n])=>`<button class="filter ${state.filter===k?'active':''}" data-filter="${k}">${t}<small>${n}</small></button>`).join('')}</div><p class="aside-note">夥伴的「已收集」是手動紀錄，不會連接實體電波暴龍機。點開卡片查看進化路線。</p></aside><div><div class="toolbar"><span>顯示 ${list.length} 位夥伴</span><span>VER.COMPLETE</span></div><div class="grid">${list.map(({p,i})=>`<article class="card"><button class="card-main" data-partner="${i}"><div class="card-top"><span class="number">NO. ${String(i+1).padStart(2,'0')}</span><span class="tag">${p[3]}</span></div><div class="name-line">${sprite(p[0])}<div><h3>${p[0]}</h3>${partnerStats(p[0])}<span class="en">${p[1]}</span></div></div><div class="card-bottom">${i<7?'初始可選／HELP WAVE':i===10?'Tri／HELP WAVE':'HELP WAVE 救援'} · ${p[4]?'查看進化':'無後續進化'}</div></button>${check('p'+i,'已收集此夥伴')}</article>`).join('')||'<div class="empty">沒有符合條件的夥伴，請修改搜尋或分類。</div>'}</div></div></div>`;}
 function enemyRow(e,boss){const observed=e[2]!=null;return `<tr><td><div class="enemy-identity">${enemySprite(e)}<div><b>${e[0]}</b>${boss?'<span class="boss">頭目</span>':''}<div class="en">${esc(e[1])}</div></div></div></td><td>${e[2]??'—'}</td><td>${e[3]??(observed?'待確認':'—')}</td></tr>`;}
-function renderMaps(){const list=maps.filter(m=>match(m)&&(state.map==='all'||m[0].startsWith(state.map+'–'))&&(!state.measured||m[3].some(e=>e[2]!=null)||m[4][2]!=null));return progress(maps.map(m=>'m'+m[0]),'你的關卡進度')+`<div class="pills">${['全部','大冒險前段','東京篇','大冒險後段','我們的戰爭遊戲','Tri','絆'].map((t,i)=>`<button class="pill ${state.map===(i?String(i):'all')?'active':''}" data-map="${i||'all'}">${i?'Map '+i+' · ':''}${t}</button>`).join('')}</div><div class="toolbar"><span>顯示 ${list.length} 個區域</span><label><input type="checkbox" id="measured" ${state.measured?'checked':''}> 只看有實測數值的關卡</label></div><div class="notice">生命值＝HP，攻擊力＝ATK。— 表示尚未記錄。</div><div class="map-list">${list.map(m=>`<article class="map-card"><div class="map-head"><h3>Map ${m[0]}<small>${m[1]}</small></h3><div class="map-steps">${m[2]?m[2].toLocaleString():'待確認'}<small>${m[2]?'步 · 你的實測':'步數'}</small></div></div><div class="map-body"><div class="table-wrap"><table><thead><tr><th scope="col">敵人</th><th scope="col">生命值</th><th scope="col">攻擊力</th></tr></thead><tbody>${m[3].map(e=>enemyRow(e,false)).join('')}${enemyRow(m[4],true)}</tbody></table></div>${m[0]==='5–2'?'<p class="map-note">解鎖提示：以奧米加獸分別擊敗拉貴爾獸及神聖天女獸・墮落形態，解鎖慈悲形態。</p>':m[0]==='6–1'?'<p class="map-note">解鎖提示：兩位夥伴各自以奧米加獸擊敗完全體艾奧斯獸，分別解鎖勇氣／友情之絆。目標不是究極體頭目。</p>':''}${m[0]==='1–2'?'<p class="map-note">奧加獸生命值 4、攻擊力 2，已實測確認。</p>':''}</div>${check('m'+m[0],'已通過 Map '+m[0])}</article>`).join('')||'<div class="empty">沒有符合條件的關卡。</div>'}</div>`;}
+function renderMaps(){const list=maps.filter(m=>match(m)&&(state.map==='all'||m[0].startsWith(state.map+'–'))&&(!state.measured||m[3].some(e=>e[2]!=null)||m[4][2]!=null));return progress(maps.map(m=>'m'+m[0]),'你的關卡進度')+`<div class="pills">${['全部','大冒險前篇','東京篇','大冒險後篇','我們的戰爭遊戲篇','Tri篇','絆篇'].map((t,i)=>`<button class="pill ${state.map===(i?String(i):'all')?'active':''}" data-map="${i||'all'}">${i?'Map '+i+' · ':''}${t}</button>`).join('')}</div><div class="toolbar"><span>顯示 ${list.length} 個區域</span><label><input type="checkbox" id="measured" ${state.measured?'checked':''}> 只看有實測數值的關卡</label></div><div class="notice">生命值＝HP，攻擊力＝ATK。— 表示尚未記錄。</div><div class="map-list">${list.map(m=>`<article class="map-card"><div class="map-head"><h3>Map ${m[0]}<small>${m[1]}</small></h3><div class="map-steps">${m[2]?m[2].toLocaleString():'待確認'}<small>${m[2]?'步 · 你的實測':'步數'}</small></div></div><div class="map-body"><div class="table-wrap"><table><thead><tr><th scope="col">敵人</th><th scope="col">生命值</th><th scope="col">攻擊力</th></tr></thead><tbody>${m[3].map(e=>enemyRow(e,false)).join('')}${enemyRow(m[4],true)}</tbody></table></div>${m[0]==='5–2'?'<p class="map-note">解鎖提示：以奧米加獸分別擊敗拉貴爾獸及神聖天女獸・墮落形態，解鎖慈悲形態。</p>':m[0]==='6–1'?'<p class="map-note">解鎖提示：兩位夥伴各自以奧米加獸擊敗完全體艾奧斯獸，分別解鎖勇氣／友情之絆。目標不是究極體頭目。</p>':''}${m[0]==='1–2'?'<p class="map-note">奧加獸生命值 4、攻擊力 2，已實測確認。</p>':''}</div>${check('m'+m[0],'已通過 Map '+m[0])}</article>`).join('')||'<div class="empty">沒有符合條件的關卡。</div>'}</div>`;}
 const unlocks=[['omega','奧米加獸','亞古獸與加布獸各累積 55 勝；先跳躍進化成戰鬥暴龍獸或鋼鐵加魯魯獸，再進化。'],['mercy','奧米加獸・慈悲形態','Map 5–2：以奧米加獸分別擊敗拉貴爾獸及神聖天女獸・墮落形態。'],['courage','亞古獸・勇氣之絆','Map 6–1：用亞古獸一方進化的奧米加獸，擊敗完全體 Eosmon。'],['friendship','加布獸・友情之絆','Map 6–1：用加布獸一方進化的奧米加獸，另一次擊敗完全體 Eosmon。']];
-function renderEvolution(){return `<div class="win-grid">${[['成熟期','10'],['完全體','25'],['究極體','40'],['奧米加獸','各 55']].map(([t,n])=>`<div class="win">累積勝場 · ${t}<b>${n}</b>${partnerStats(n,3)}</div>`).join('')}</div><p class="notice">一般門檻適用於成長期起步的進化夥伴。勝場按夥伴分開計算；奧米加獸需要亞古獸、加布獸兩邊都達標。迪路獸等不同起始階段的夥伴要另看機內 WIN 表。</p><div class="rule-grid">${unlocks.filter(match).map(([key,t,p])=>`<article class="card"><div class="panel"><span class="eyebrow">特殊進化</span>${sprite(t,'special-unlock')}<h3>${t}</h3><p>${p}</p></div>${check('u'+key,'已解鎖')}</article>`).join('')}</div><section class="panel" style="margin-top:22px"><h3>黑暗進化</h3><p>亞古獸／加布獸在已能進化至完全體或以上時，因戰敗或逃跑失敗受傷兩次，可切換黑暗路線；再戰敗兩次回復正常路線。黑暗狀態會限制奧米加獸及其他特殊進化。</p><p>網上整理對黑暗進化的前置條件有差異；以上採用說明書，請同時觀察機內參數畫面的表情變化。</p></section>`;}
+
+const specialMeta={omega:['合體進化','亞古獸／加布獸',null],mercy:['慈悲形態','亞古獸／加布獸','5–2'],courage:['絆進化','亞古獸','6–1'],friendship:['絆進化','加布獸','6–1']};
+function specialCards(partner=null){const list=unlocks.filter(u=>(!partner||specialMeta[u[0]][1].includes(partner))&&match(u));return '<div class="special-evolution-grid">'+list.map(([key,name,condition])=>{const [group,who,map]=specialMeta[key];return '<article class="card special-evolution-card"><div class="panel"><span class="eyebrow">'+group+'</span><div class="special-evolution-top">'+sprite(name)+'<div><h3>'+name+'</h3>'+partnerStats(name,3)+'</div></div><p><b>適用夥伴：</b>'+who+'</p><h4>解鎖條件</h4><p>'+condition.replaceAll('完全體 Eosmon','艾奧斯獸・完全體')+'</p>'+(map?'<a class="button" href="#maps/'+map+'">查看 Map '+map+'</a>':'<a class="button" href="#evolution">查看進化解鎖</a>')+'</div>'+check('u'+key,'已解鎖')+'</article>';}).join('')+'</div>';}
+function darkEvolution(partner=null){const names=partner==='亞古獸'?['喪屍暴龍獸','黑戰鬥暴龍獸']:partner==='加布獸'?['黑獸人加魯魯獸','黑鋼鐵加魯魯獸']:['喪屍暴龍獸','黑戰鬥暴龍獸','黑獸人加魯魯獸','黑鋼鐵加魯魯獸'];return '<section class="panel dark-evolution"><h3>黑暗進化</h3><div class="dark-sprites">'+names.map(n=>'<div>'+sprite(n)+'<b>'+n+'</b></div>').join('')+'</div><p>適用夥伴：'+(partner||'亞古獸／加布獸')+'。已能進化至完全體或以上時，因戰敗或逃跑失敗受傷兩次，可切換黑暗路線；再戰敗兩次回復正常路線。</p><p>黑暗進化期間，無法進化為奧米加獸及其他特殊進化形態。這是可切換的狀態，不列入永久解鎖勾選。</p></section>';}
+function renderEvolution(){return `<div class="win-grid">${[['成熟期','10'],['完全體','25'],['究極體','40'],['奧米加獸','各 55']].map(([t,n])=>`<div class="win">累積勝場 · ${t}<b>${n}</b></div>`).join('')}</div><p class="notice">一般門檻適用於成長期起步的進化夥伴。勝場按夥伴分開計算；奧米加獸需要亞古獸、加布獸兩邊都達標。迪路獸等不同起始階段的夥伴要另看機內 WIN 表。</p>${specialCards()}${darkEvolution()}`;}
 const rules=[['基本按鍵','A＝右上確認；B＝右下返回；左側 L／R 選擇項目。主畫面按 L 看時間，時鐘畫面 R＋A 校時。主畫面 A＋B 開啟聲音設定。'],['DP 與進化','每 100 步回復 1 DP，全隊共用。一般進化每次 3 DP，跳躍進化至究極體 7 DP。進化先要解鎖，戰鬥時亦要有足夠 DP。'],['READY! 連按','選攻擊或進化後，READY! 時快速連按 A。普通戰鬥最多 3 回合，頭目戰最多 5 回合；普通戰鬥結算 HP 相同亦算勝。'],['究極體分支','要用究極體，從進化分支直接選究極體。成熟期再進化至完全體後，該場不能再由完全體升至究極體。'],['HELP WAVE','收到訊號後，在三格天線及 CATCH! 顯示時按 A／L／R 回應，再贏得救援戰。約三分鐘後訊號消失，之後仍可再遇；也有敵人的假求救。'],['受傷先治療','遇敵畫面按 B 或沒有回應會判負。受傷一般扣 2 DP，並增加 500 步路程；先選治療指令才可繼續行走。'],['睡眠與計步','機內時間 21:00–08:59 睡眠。按 B 可暫時喚醒約 15 分鐘，但仍不計步、不回 DP。螢幕正常省電熄滅時仍可計步。'],['電池與存檔','使用 CR2032 電池。更換電池或重啟後選 LOAD／YES 讀取紀錄；不要誤選刪除資料的初始化。'],['戰利品','肉：回復 2 DP。蛋白質：下一場 HP＋1。P－藥物：下一場須取得攻擊權才可一擊擊倒普通敵人，對頭目無效。'],['通關之後','可返回已通過地區，繼續遇敵、收集夥伴及補解鎖。哈克獸可於 Tri透過電波搜尋／HELP WAVE 加入；不保證第一次求救就出現。']];
 const basicFunctionGroups=[["選單與基本功能",[["能力與更換夥伴","","<p>在能力選單按 A 進入夥伴選擇，切換到想使用的數碼暴龍，再按 B 回到主畫面。能力頁可查看 DP、WIN、HP 及 AP。</p>"],["DP：全隊共用","","<p>進化等操作需要 DP；數值由所有夥伴共用。</p><table><thead><tr><th>變化條件</th><th>DP</th></tr></thead><tbody><tr><td>累積 100 步</td><td>＋1</td></tr><tr><td>進化至成熟期／完全體</td><td>－3</td></tr><tr><td>跳躍進化至究極體</td><td>－7</td></tr><tr><td>戰敗</td><td>－2</td></tr></tbody></table>"],["WIN：分階段累積勝場","","<p>勝場按夥伴分開計算，解鎖下一階段後再累積該階段所需勝場。</p>"],["HP 與 AP","","<p>HP 是生命值，AP／ATTACK 是攻擊力。能力頁可切換已開放的進化形態，查看各階段數值。</p>"],["地圖與剩餘步數","","<p>地圖頁顯示目前地區。一般約每 400–600 步遇敵；戰敗會令該區剩餘路程增加 500 步。</p>"],["醫療箱","","<p>夥伴戰敗受傷後，選擇醫療箱治療，再繼續冒險。</p>"],["連線對戰","","<p>15th 的連線對戰使用目前選定的夥伴及其可用進化；先成功攻擊 4 次的一方勝出。這與地圖遭遇戰的 3／5 回合規則不同。</p><p>原文列出的對應機種：初代數碼暴龍對打機、Pendulum、電波暴龍機、D-3、電波暴龍機 15th、D-3 15th、D-Ark 15th、數碼暴龍對打機 20th、Pendulum 20th 及 Complete。此清單屬原文的 15th 連線整理。</p>"]]],["遭遇戰獲得道具",[["肉 · ニク","item-meat.png","<p>取得後回復 <b>2 DP</b>。</p>"],["蛋白質 · プロテイン","item-protein.png","<p><b>下一場戰鬥</b>的 HP 增加 1。</p>"],["P－藥物 · Ｐ－ドラッグ","item-p-drug.png","<p>下一場對普通敵人成功攻擊時，可一擊擊倒對方；<b>頭目戰無效</b>。仍須先取得攻擊權，未能攻擊一樣可能戰敗。</p>"]]],["電波搜尋事件",[["觸發與截取時限","","<p>總步數每累積 <b>3,000 步</b>觸發一次；遭遇頭目時不會發生。截取訊號的操作時限為 <b>3 分鐘</b>。</p><div class=\"signal-grid\"><figure><img src=\"images/signal-weak.png\" alt=\"弱電波訊號圖示\" loading=\"lazy\"><figcaption>弱</figcaption></figure><figure><img src=\"images/signal-medium.png\" alt=\"中電波訊號圖示\" loading=\"lazy\"><figcaption>中</figcaption></figure><figure><img src=\"images/signal-strong.png\" alt=\"強電波訊號圖示\" loading=\"lazy\"><figcaption>強</figcaption></figure></div><p>等待訊號增強，三格天線及 CATCH! 出現時按 A／L／R 回應。</p>"],["搜尋結果：夥伴求救","","<p>出現 HELP! 後進入救援戰；獲勝即可讓求救的夥伴加入。</p>"],["搜尋結果：同種數碼暴龍","","<p>遇到與目前夥伴相同的數碼暴龍，其 HP、AP 各比夥伴高 1。打贏後，該夥伴的 HP、AP 亦各提升 1。</p>"],["搜尋結果：陷阱","","<p>進入普通遭遇戰流程，不會招募新夥伴。</p>"]]],["遭遇戰操作流程",[["開始與每回合選擇","","<ol><li>遇敵後按 A 確認，再按 A 進入選單。</li><li>選擇攻擊、進化、更換夥伴或逃走。</li><li>攻擊／進化／換夥伴後，在 READY! 畫面快速連按 A。</li><li>任何一方攻擊完成後，回到選單，可重新決定下一步。</li></ol><p>遇敵時按 B 或太久沒有回應會直接判負，夥伴受傷。</p>"],["逃走與勝負","","<p>逃走成功可減少路程；失敗會增加路程並令夥伴受傷。普通戰鬥最多 3 回合，頭目戰最多 5 回合；HP 歸零即分勝負。普通戰鬥滿 3 回合後按剩餘 HP 比較，我方 HP 相同亦算勝。</p>"]]]];
 function renderRules(){const sections=basicFunctionGroups.map(([title,items])=>[title,match(title)?items:items.filter(match)]).filter(([,items])=>items.length);const quick=rules.filter(([t])=>!["戰利品","HELP WAVE","DP 與進化","READY! 連按","受傷先治療"].includes(t)).filter(match);return `<div class="basic-guide">${sections.map(([title,items])=>`<section class="guide-section ${title==='電波搜尋事件'?'signal-section':''}"><h3>${title}</h3><div class="rule-grid">${items.map(([t,img,body])=>`<article class="panel guide-panel">${img?`<img class="guide-image" src="images/${img}" alt="${esc(t)}畫面" loading="lazy">`:""}<h4>${t}</h4><div class="guide-copy">${body}</div></article>`).join('')}</div></section>`).join('')}${quick.length?`<section class="guide-section"><h3>其他操作備忘</h3><div class="rule-grid">${quick.map(([t,p])=>`<article class="panel"><h4>${t}</h4><p>${p}</p></article>`).join('')}</div></section>`:""}${!sections.length&&!quick.length?'<div class="empty">沒有符合的筆記。</div>':""}<p class="guide-source">基本功能及圖片參考：${sourceLink("https://home.gamer.com.tw/artwork.php?sn=3249341","影子・電波暴龍機基本功能介紹")}。按本站機種及香港用語重新整理；15th 專屬資料另行標明。</p></div>`;}
@@ -582,10 +586,10 @@ function renderVersions(){const group=state.versionGroup||'all';const visible=ve
 
 function renderSources(){return `<div class="panel sources"><h3>實測資料優先保留原意</h3><p>你的紀錄：Map 1–2 至 Map 2–2 的部分敵人 HP／ATK；Map 1–3、1–4 各 4,000 步，Map 2–1、2–2 各 5,000 步，Map 2–3、3–1 各 6,000 步。究極吸血魔獸生命值 7、攻擊力 4；奇蛙獸生命值 5、攻擊力 2；貝殼獸生命值 4、攻擊力 1，已實測確認。全關卡統一實測：吸血魔獸生命值 6、攻擊力 4；猛鬼獸生命值 3、攻擊力 1。Map 1–1、1–2 各 3,000 步。怪蛙獸生命值 4、攻擊力 1，已實測確認。</p><p>只使用 Map－區域編號，不保留連續 Area 編號。實測紀錄名稱如「長毛象獸」「爛泥獸」保留，並附英文作對照。其餘敵人名單與頭目來自網上整理，不代表已實測數值。</p><h3>解鎖條件採用紀錄</h3><p>慈悲形態及哈克獸入手時間按你提供的遊玩資料統一：Map 5–2 以奧米加獸分別擊敗拉貴爾獸及神聖天女獸・墮落形態；哈克獸於 Tri透過電波搜尋／HELP WAVE 有機會加入。</p><p>2026 年 11 月 21 日批次實測更新：關卡步數及敵人能力依最新紀錄更新；Map 3–2 為 7,000 步，取代較早的 9,000 步。新增奇鳥獸及機械裝甲獸，機械裝甲獸能力尚未提供。</p><h3>香港譯名對照</h3><p>經典角色以香港配音資料核對，例如亞路加獸、亞保加利獸、女惡魔獸及極惡熊仔獸。未確認的後期譯名不當作官方港譯。</p><p>${sourceLink("https://hkdubbing.fandom.com/zh-hk/wiki/數碼暴龍（日本動畫）/01","香港配音資料")}</p><h3>像素圖來源</h3><p>圖片選用原則：只收錄日版圖像，不使用美版、歐版或亞洲版專屬圖。優先採用日版電波暴龍機；其他日版機種的角色像素圖會在圖片來源清單中標明，不代表 Complete 機內畫面。</p><p>日版圖庫索引：${sourceLink("https://digimon.fandom.com/wiki/Category:Japanese_Digivice_Ver.Complete_Images","日版 Complete 圖庫")} ／ ${sourceLink("https://digimon.fandom.com/wiki/Category:Japanese_Digivice_Ver.15th_Images","日版十五週年圖庫")}。補充圖片使用 Wikimon 所列日版機種像素圖，各檔案出處記錄於圖片來源清單。</p><p>關卡敵人及頭目像素圖：${sourceLink("https://lcd.withthewill.net/DigiviceGallery1x","原版第一版敵人圖庫")} ／ ${sourceLink("https://lcd.withthewill.net/DigiviceGallery2x","原版第二版敵人圖庫")}。只配對本攻略已有的同名角色，不將舊版關卡或數值套用至 Complete。</p><p>基本夥伴及原版進化形態優先配對 With the Will 圖庫；後期與特殊形態以 Wikimon 補充。部分 Wikimon 圖片來自其他液晶機種，作角色像素圖參考，不代表 Complete 機內的逐格畫面。</p><p>${sourceLink("https://lcd.withthewill.net/DigiviceGallery","With the Will · 夥伴圖庫")} ／ ${sourceLink("https://wikimon.net/Digivice_Toy","Wikimon · 電波暴龍機像素圖")}</p><h3>參考資料</h3><ul><li>${sourceLink("https://home.gamer.com.tw/artwork.php?sn=3249341","影子・電波暴龍機基本功能介紹，第六節")}：六版本逐項差異、系統功能與例外註解。</li><li>${sourceLink('https://www.manualslib.com/manual/4000142/Digimon-Adventure-Digivice-Ver-Complete.html','Ver.Complete 說明書鏡像')}：按鍵、DP、進化勝場、睡眠與戰鬥。</li><li>${sourceLink('https://wikimon.net/Digivice_Ver.Complete','Wikimon · Ver.Complete')}：夥伴、地圖敵人、頭目及特殊進化；屬社群整理。</li><li>${sourceLink('https://digitalmonster.fandom.com/pt/wiki/DigiVice_Ver.Complete','Digimon Wiki · Ver.Complete')}：夥伴路線補充。</li><li>${sourceLink('https://www.atpress.ne.jp/news/220906','Bandai Spirits · Complete 發布資料')}：收錄篇章及約 80 隻登場數碼獸。</li><li>${sourceLink('https://toy.bandai.co.jp/en/article/detail/?cate=item&path=01_20773','Bandai · Revival 產品資料')}／${sourceLink('https://toy.bandai.co.jp/ja/topics/01_21179/','連線接頭通知')}。</li><li>${sourceLink('https://humulos.com/digimon/dvc/manual/','Humulos · 25th Color Evolution')}：版本玩法比較。</li><li>${sourceLink('https://digikidult.github.io/Digimon-VER-WS/','DigiKidult · Ver.WS 攻略')}：本網站視覺風格參考。社交平台列沿用其品牌標誌及公開連結。</li></ul><p>非官方攻略，與 Bandai 及東映動畫無隸屬關係。主要顯示採用香港譯名；角色名稱採用本站統一用字。英文及日文識別資料僅供搜尋。資料整理：2026 年 11 月 19 日。</p></div>`;}
 function render(){const info=pageInfo[state.page];$('#kicker').textContent=info[0];$('#title').textContent=info[1];$('#description').textContent=info[2];document.querySelectorAll('nav a').forEach(a=>{a.classList.toggle('active',a.hash==='#'+state.page);if(a.hash==='#'+state.page)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});$('#view').innerHTML=({partners:renderPartners,maps:renderMaps,evolution:renderEvolution,rules:renderRules,versions:renderVersions,sources:renderSources,faq:renderFaq}[state.page])();$('#search').closest('.search-wrap').hidden=state.page==='sources';}
-function route(){const next=location.hash.slice(1);state.page=pageInfo[next]?next:'partners';state.q='';$('#search').value='';render();}
-document.addEventListener('click',e=>{const vg=e.target.closest('[data-version-group]');if(vg){state.versionGroup=vg.dataset.versionGroup;render();return;}const f=e.target.closest('[data-filter]'),m=e.target.closest('[data-map]'),p=e.target.closest('[data-partner]');if(f){state.filter=f.dataset.filter;render();}if(m){state.map=m.dataset.map;render();}if(p){const i=Number(p.dataset.partner),d=partners[i],steps=d[4]?d[4].split('|'):[];$('#detail-body').innerHTML=`<p class="eyebrow">夥伴 ${String(i+1).padStart(2,'0')} · ${d[3]}</p><h2 id="detail-title">${d[0]}</h2><p class="en">${d[1]} · ${d[2]}</p><p>${i<7?'可於開局選擇，或其後透過 HELP WAVE 救援。':i===10?'Tri透過電波搜尋／HELP WAVE 救援，有機會加入。':'透過 HELP WAVE 救援後加入。'}</p><div class="route"><div class="route-step">${sprite(d[0])}<div><b>${d[0]}</b><small>基本形態</small>${partnerStats(d[0])}</div></div>${steps.map((s,j)=>`<div class="route-step">${sprite(s)}<div><b>${s}</b><small>${i===7?['完全體','究極體'][j]:['成熟期 · 累積 10 勝','完全體 · 累積 25 勝','究極體 · 累積 40 勝'][j]}</small>${partnerStats(s,i===7?j+2:j+1)}</div></div>`).join('')}</div>${i<2?`<h3>特殊形態</h3><div class="special-sprites">${['奧米加獸','奧米加獸・慈悲形態',i===0?'亞古獸・勇氣之絆':'加布獸・友情之絆',...(i===0?['喪屍暴龍獸','黑戰鬥暴龍獸']:['黑獸人加魯魯獸','黑鋼鐵加魯魯獸'])].map(n=>`<div>${sprite(n)}<b>${n}</b></div>`).join('')}</div>`:''}${d[5]?`<p class="notice">${d[5]}</p>`:''}<a class="button" href="#evolution" id="go-evolution">查看解鎖條件</a>`;$('#detail').showModal();}});
+function route(){const [next,targetMap]=decodeURIComponent(location.hash.slice(1)).split('/');state.page=pageInfo[next]?next:'partners';if(state.page==='maps'&&targetMap){state.map=targetMap.split('–')[0];state.measured=false;}state.q='';$('#search').value='';render();if(state.page==='maps'&&targetMap){const card=[...document.querySelectorAll('.map-card')].find(c=>c.querySelector('h3').textContent.startsWith('Map '+targetMap));card?.scrollIntoView({block:'start'});}}
+document.addEventListener('click',e=>{const vg=e.target.closest('[data-version-group]');if(vg){state.versionGroup=vg.dataset.versionGroup;render();return;}const f=e.target.closest('[data-filter]'),m=e.target.closest('[data-map]'),p=e.target.closest('[data-partner]');if(f){state.filter=f.dataset.filter;render();}if(m){state.map=m.dataset.map;render();}if(p){const i=Number(p.dataset.partner),d=partners[i],steps=d[4]?d[4].split('|'):[];$('#detail-body').innerHTML=`<p class="eyebrow">夥伴 ${String(i+1).padStart(2,'0')} · ${d[3]}</p><h2 id="detail-title">${d[0]}</h2><p class="en">${d[1]} · ${d[2]}</p><p>${i<7?'可於開局選擇，或其後透過 HELP WAVE 救援。':i===10?'Tri透過電波搜尋／HELP WAVE 救援，有機會加入。':'透過 HELP WAVE 救援後加入。'}</p><div class="route"><div class="route-step">${sprite(d[0])}<div><b>${d[0]}</b><small>基本形態</small>${partnerStats(d[0])}</div></div>${steps.map((s,j)=>`<div class="route-step">${sprite(s)}<div><b>${s}</b><small>${i===7?['完全體','究極體'][j]:['成熟期 · 累積 10 勝','完全體 · 累積 25 勝','究極體 · 累積 40 勝'][j]}</small>${partnerStats(s,i===7?j+2:j+1)}</div></div>`).join('')}</div>${i<2?`<h3>特殊進化</h3>${specialCards(d[0])}${darkEvolution(d[0])}`:''}${d[5]?`<p class="notice">${d[5]}</p>`:''}<a class="button" href="#evolution" id="go-evolution">查看解鎖條件</a>`;$('#detail').showModal();}});
 document.addEventListener('change',e=>{if(e.target.dataset.save){saved[e.target.dataset.save]=e.target.checked;persist();render();}if(e.target.id==='measured'){state.measured=e.target.checked;render();}});
 document.addEventListener('input',e=>{if(e.target.id==='search'){state.q=e.target.value;render();}});
-$('#detail .close').addEventListener('click',()=>$('#detail').close());$('#detail').addEventListener('click',e=>{if(e.target.id==='go-evolution')$('#detail').close();if(e.target===$('#detail')){const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)e.target.close();}});
+$('#detail .close').addEventListener('click',()=>$('#detail').close());$('#detail').addEventListener('click',e=>{if(e.target.closest('a[href^="#"]'))$('#detail').close();if(e.target===$('#detail')){const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)e.target.close();}});
 document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)&&!$('#detail').open&&state.page!=='sources'){e.preventDefault();$('#search').focus();}});
 window.addEventListener('hashchange',route);route();
